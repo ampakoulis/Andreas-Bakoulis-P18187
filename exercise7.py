@@ -1,7 +1,7 @@
 #ergasia7
 #python 3.7.1
 print("--------------------------------------")
-print("ΤΡΙΛΙΖΑ ΠΑΙΚΤΗΣ VS ΥΠΟΛΟΓΙΣΤΗΣ")
+print("PLAYER VS PC")
 print("--------------------------------------")
 def main(user,pc, new):
     a = sign(user,pc)
@@ -15,7 +15,7 @@ def main(user,pc, new):
         draw(new)
         userF(user,pc, new)
     else :
-        print ("Ο  υπολογιστής αρχίζει πρώτος")
+        print ("Ο  PC αρχίζει πρώτος")
         draw(new)
         pcF(user,pc, new)
 
@@ -63,7 +63,7 @@ def userF(user,pc, new):
             break
         else:
             pass
-        print ("Ο  υπολογιστής επέλεξε:",end=" ")
+        print ("Ο  PC επέλεξε:",end=" ")
         p_move = pc_turn(user,pc, new)
         print (p_move)
         new[int(p_move)] = pc
@@ -82,7 +82,7 @@ def userF(user,pc, new):
 #Περίπτωση οπου ο υπολογιστης αρχιζει πρωτος
 def pcF(user,pc, new):
     while not winn(user,pc, new):
-        print ("Ο  υπολογιστής επέλεξε:",end=" ")
+        print ("Ο  PC επέλεξε:",end=" ")
         p_move = pc_turn(user,pc, new)
         print (p_move)
         new[p_move] = pc
